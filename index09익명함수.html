@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // a(); 익명함수는 호이스팅이 불가능
+
+        //익명함수 - 이름을 적지 않음, 변수에 저장함
+        var a = function () {
+            
+            console.log("hello world");
+
+        }
+
+        var b = function(x,y) {
+            
+            return x+y;
+        }
+
+       var result = b(1,2);
+        console.log(result);
+
+        console.log("=========================================")
+
+
+        var a1= function (a,b,c,d) {
+
+            sum = a+'님의평균'+(b+c+d/3);
+            return sum;
+        }
+
+      var result2 = a1('홍길동',20,30,40);
+      console.log(result2);
+
+
+
+      var a2 = function(a) {
+
+        if(a%2 == 0){
+            console.log('짝수')
+
+        }else{
+            console.log('홀수')
+        }
+    
+      }
+
+      var result3 = a2(3);
+      console.log(result3)
+
+
+      var a3 = function (x) {
+        
+        var sum1 =0;
+
+        for(var i=1; i<=x; i++){
+
+            sum1 += i;
+        }
+        return sum1;
+        
+      }
+      console.log(a3(30));
+
+      var a4 = function (x,y) {
+        
+        return x.concat(y);
+        }
+       console.log(a4([1,2,3],[4,5,6,7,8]));
+        
+      
+
+
+
+    </script>
+
+
+</body>
+</html>
