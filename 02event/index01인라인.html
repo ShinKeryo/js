@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>인라인 이벤트 - 태그에 직접 이벤트를 걸어주는 방법</h3>
+
+        <!-- <button type="button" onclick="
+        var a =1;
+        var b='홍깅동'
+        console.log(a+b);
+        alert(a+b);
+        ">버튼</button> -->
+
+
+    <button type="button" onclick="check();">눌러바 </button>
+    <button type="button" onclick="check();">재활용 가능 </button>
+
+            <button type="button" onclick="call(this)">this란?</button>
+
+        <script>
+
+            
+            function check(){
+                alert("ㅎㅇ요");
+            }
+
+            //this - 태그에서 this는 자기 자신을 나타냅니다. (매개변수로 자기 자신을 보낼수있음)
+            function call(btn){
+                btn.innerHTML = "짠!!!!!!!!!!!!!!" //innerhtml 태그 사이의 값
+            }
+
+        </script>
+
+
+</body>
+</html>

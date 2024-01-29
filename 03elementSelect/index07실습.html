@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        input:focus{
+            outline:none;
+        }
+    </style>
+
+
+</head>
+<body>
+    
+
+아이디 <input type="text" id="input" value="" style="border: 3px solid #000;">
+<h3 id = msg></h3>
+
+<script>
+
+var input = document.getElementById("input");
+var msg = document.querySelector("#msg");
+
+
+input.onkeyup = function(){
+
+    if(input.value.length < 4 ){
+
+        input.style.borderColor = "green";
+        msg.innerHTML = "4글자이상"
+    }else{
+        msg.innerHTML = "";
+        input.style.borderColor ="red";
+    }
+
+
+}
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    id<input type="text" id="btn">
+    기억하기<input type="checkbox" id="check">
+    <button type="button" id="id">확인</button>
+
+
+
+    <script>
+        var btn = document.getElementById("btn");
+        var check = document.getElementById("check");
+        var id = document.getElementById("id");
+
+       id.onclick = function(){
+        
+
+        
+        alert('사용자:'+btn.value+'       기억하기'+check.checked);
+       
+    }
+
+
+    </script>
+
+
+    <h3 id="langs">한국어 입니다</h3>
+
+    <Select id="change">
+        <option value="한국어입니다">ㅎㅇ</option>
+        <option value="영어요">gi</option>
+        <option value="일본어">곤니</option>
+        <option value="중국어">중국</option>
+
+    </Select>
+    <script>
+
+       var x = document.getElementById("change");
+    
+       var title = document.getElementById("langs");
+
+      
+       x.onchange = function(){
+
+        title.innerHTML = x.value;
+
+       }
+
+        
+
+
+    </script>
+
+</body>
+</html>

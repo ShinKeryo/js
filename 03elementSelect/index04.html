@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<input type="number" id="num" value=0>
+<button type="button" id="+">+</button>
+<button type="button" id="-">-</button>
+
+
+<script>
+
+var num = document.getElementById("num");
+var pus = document.getElementById("+");
+var mas = document.getElementById("-");
+
+pus.onclick = function(){
+
+    num.innerHTML = num.value++;
+}
+
+mas.onclick = function(){
+    
+    
+    if(num.value <=0){
+        alert("0보다 작으면 안됩니다.")
+    }else{
+        
+        num.innerHTML = num.value--;
+    }
+}
+
+
+
+</script>
+
+
+<hr/>
+
+
+<input type="checkbox" class="seat" value="1">1
+<input type="checkbox" class="seat" value="2">2
+<input type="checkbox" class="seat" value="3">3
+<input type="checkbox" class="seat" value="4">4
+<input type="checkbox" class="seat" value="5">5
+<input type="checkbox" class="seat" value="6">6
+<input type="checkbox" class="seat" value="7">7
+<input type="checkbox" class="seat" value="8">8
+<input type="checkbox" class="seat" value="9">9
+<br>
+
+<button type="button" id="btn"  onclick="check(check)">예약</button>
+<br>
+예약번호 : <div id = "msg"></div>
+
+<script>
+    var seat = document.getElementsByClassName("seat");
+
+    var btn = document.getElementById("btn");
+    var bool = false;
+    var arr =[];
+    var msg = document.getElementById("msg");
+
+    btn.addEventListener('click',function() {
+        for (var i=0; i<seat.length; i++){
+
+            if(seat[i].checked){ 
+
+                bool = true;
+                arr.push(seat[i].value)
+            }
+
+        }
+
+    }
+
+    if(bool== false){
+        alert("좌석선택 안됨")
+        msg.innerHTML="";
+    }else{
+        msg.innerHTML = arr.join;
+    }
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
