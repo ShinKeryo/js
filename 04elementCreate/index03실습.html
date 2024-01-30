@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    
+    table{border-spacing: 0; border-collapse: collapse;}
+    th, td {border: 1px solid black;}
+
+
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+    
+    <button type="button" id="btn1">5개 추가하기</button>
+    <button type="button" id="btn2">1개 추가하기</button>
+
+    <table id="table">
+        <tr>
+            <td> 교시 </td>
+            <td>훈련과목</td>
+            <td>담당자</td>
+            <td>훈련내용</td>
+        </tr>
+
+        <tr>
+        <td><input type="text" size="3"></td>
+        <td><input type="text"></td>
+        <td><input type="text" size="3"></td>
+        <td><input type="text"></td>
+
+
+        </tr>
+        
+    
+
+    </table>
+
+
+    <script>
+
+     var btn1 = document.getElementById("btn1");
+     var btn2 = document.getElementById("btn2");
+     
+     var table = document.getElementById("table");
+     
+    
+     
+     
+     
+     btn2.onclick = function(){
+         
+         var tr = document.createElement("tr");
+         
+         for(var i = 0; i<4; i++){
+
+             
+             var td = document.createElement("td"); //td태그 생성
+             td.innerHTML = "<input type='text'>"
+             tr.appendChild(td);
+             
+            }
+            table.appendChild(tr)
+
+     }
+
+
+     btn1.onclick = function(){
+
+         for(var i =0 ; i<5; i++){
+             
+            var tr = document.createElement("tr");
+         
+             for(var j = 0; j<4; j++){
+
+             
+             var td = document.createElement("td"); //td태그 생성
+             td.innerHTML = "<input type='text'>"
+             tr.appendChild(td);
+             
+             }
+            table.appendChild(tr)
+
+            }
+           
+         
+        
+        
+
+
+     }
+
+
+    </script>
+    
+
+</body>
+</html>
