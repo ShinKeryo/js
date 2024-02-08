@@ -51,7 +51,7 @@
     btn2.onclick = function(){
         var li = document.createElement("li");
         
-        li.innerHTML = input2.value+"<button type='button' onclick = 'remove(this)'>X</button>"
+        li.innerHTML = input2.value+"<button type='button' onclick = 'remove(this)'>X</button><button type='button' onclick='up(this)'>위</button><button type='button' onclick='down(this)'>아래</button>"
         list.appendChild(li);
         input2.value = "";
         
@@ -82,10 +82,36 @@
 
     }
 
+    function up(before){
+
+       
+        var current = before.parentElement;
+        var bef = current.previousElementSibling;
 
 
+        if(bef == null){
+            alert("못올라감");
+            return;
+        }
+
+        list.insertBefore(current,bef);
+
+    }
 
 
+    function down (next){
+
+      
+        var current = next.parentElement;
+        var next2 = current.nextElementSibling;
+ 
+        if(next2 == null){
+            alert("못내려감.")
+        }
+
+        list.insertBefore(next2,current);
+
+    }
 
 </script>
 

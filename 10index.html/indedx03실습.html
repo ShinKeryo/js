@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {width: 300px;height: 200px;}
+
+    </style>
+
+
+</head>
+<body>
+
+<div class="box">
+    <img src="img/1.jpg"  alt="이미지">
+    <img src="img/2.jpg"  alt="이미지">
+    <img src="img/3.jpg"  alt="이미지">
+    <img src="img/4.jpg"  alt="이미지">
+</div>
+
+<button type="button" onclick="location.href='index03실습1.html'">최신정보 확인하기</button>
+
+<script>
+
+    var box = document.querySelector(".box");
+   
+
+
+    box.onclick = function(e){
+
+         if(e.target.tagName != "IMG")return;
+        setStorage(e.target.src);
+
+    }
+
+    function setStorage(img){
+
+        var x = img.src
+
+        var arr = []
+
+        if(localStorage.getItem("item" !=null)){
+            arr = JSON.parse(localStorage.getItem("item"));
+        }
+        //길이가 2 이상이면 앞에서 이미지를 제거
+
+        if(arr.length >=2){
+            arr.shift();
+        }
+
+        arr.push(x);
+
+        localStorage.setItem("item",JSON.stringify(arr));
+
+
+
+
+
+    }
+        
+
+</script>
+
+
+
+</body>
+</html>

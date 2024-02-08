@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul,li {list-style: none; padding: 0; margin: 0;}
+        .wrap {display: flex; flex-direction: column; justify-content: center; align-items: center;}
+         .list {display: flex; width: 900px; flex-flow: row wrap; justify-content: space-around;}
+         .list li {
+             border: 1px solid #777; width: 180px; height: 280px;
+             padding: 10px; margin-bottom: 10px;
+         }
+     </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <h3>제목</h3>
+
+        <ul class="list">
+
+            <li class="box">
+                <img src="monalisa.png" alt="사진">
+            </li>
+            <li class="box"></li>
+            <li class="box"></li>
+            <li class="box"></li>
+            <li class="box"></li>
+            <li class="box"></li>
+            <li class="box"></li>
+            <li class="box"></li>
+
+        </ul>
+
+
+    </div>
+
+    <script>
+
+        var list = document.querySelector(".list");
+      
+        var box = document.querySelector(".box");
+
+        var img = null;
+
+        list.addEventListener("dragstart",function(){
+            console.log(event.target);
+
+            img = event.target;
+        })
+
+        list.addEventListener("dragover",function(){
+            event.preventDefault();
+            if(event.target.tagName != "LI"){return};
+            console.log(1);
+        })
+        
+        list.addEventListener("drop",function(){
+            
+            if(event.target.tagName != "LI"){return};
+            
+            event.preventDefault();
+            
+
+            event.target.appendChild(img);
+
+
+        })
+
+       
+
+   
+
+    </script>
+
+
+</body>
+</html>

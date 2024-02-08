@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>리다이렉트 URI를 받은 화면</h3>
+
+    <script>
+        //2. 인가코드 받기
+        //JS에서 URL값 얻는방법
+        var url = new URLSearchParams(location.search)
+        
+        
+        if(url.get("code") != null ) {
+            getToken();
+        }
+
+        //3. 토큰발급
+        function getToken() {
+            var param = url.get("code")
+            console.log(param);
+            
+            //fetch POST방식 - 보내는 데이터는 body에다가 집어넣습니다   
+            fetch("https://kauth.kakao.com/oauth/token", {
+                method: "POST",
+                headers: {
+                    //"Content-Type": "application/json",
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: JSON.stringify(data);
+            })
+
+
+
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>

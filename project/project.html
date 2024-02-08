@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul li {list-style: none;}
+
+
+        header {border-bottom: 1px solid #777; height: 200px; margin-bottom: 20px;}
+        .flex-top {width: 1280px; border:1px solid #d9d9d9; margin: 0 auto; overflow: hidden;  height: 300px;} 
+
+        
+       
+        .filter-top button{float: right; margin-top: 30px; font-size: small; border: none; border-left: 1px solid #777; margin-right: 30px; color: #777; padding-left: 20px;}
+        .price-title {width: 1280px; list-style: none; margin: 0 auto; overflow: hidden; margin-top: 20px; padding: 10px; margin-bottom: 30px;}
+        .price-title img {width: 300px; height: 300px; display: inline-block;}
+        .price-title li {width: 25%; float: left; text-align: center; overflow: hidden; cursor: pointer;}
+        .price-font {overflow: hidden; width: 100%; color: #888888;}
+        .price-font > p {float: left; font-size: small; margin: 0;}
+        .price-font > span{float: right; font-size: small;}
+        .address {font-size: small; color: #888888; overflow: hidden;}
+        .address > span{float: left;}
+        .address > p {float: right; margin: 0;}
+        .title{padding: 10px; overflow: auto; z-index: 1; position: relative;}
+        .icon {border: 1px solid red;width: 70px; background-color: red; color: wheat; border-radius: 5px; position: absolute; top: 25px; right: 20px;}
+    
+
+
+        .address1 {font-size: small; color: #888888;}
+        .address1 > span{float: left;}
+        .address1 > p {float: right; margin: 0;}
+
+        .title > img {border: 1px solid #d9d9d9;}
+
+      
+        .hot {width: 1280px; margin: 0 auto; border-bottom: 2px solid #d9d9d9; margin-bottom: 20px;} 
+
+        .hot img {width: 30px;}
+
+   
+
+    
+/* ///////////////////// */
+
+
+
+.body2 {
+      position: relative;
+      width: 1280px;
+      margin: 0 auto;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    swiper-container {
+      width: 1000px;
+      height: 100%;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+    margin-bottom: 33px;
+      object-fit: cover;
+    }
+
+
+    /* footer */
+
+    footer{width: 1280px; height: 300px; margin: 0 auto; background-color: #fff; margin-top: 30px;}
+    footer .fter2 {width: 100%; display: flex; margin-top: 150px;}
+    
+    footer .fter2 img{width: 100px;height: 100px; padding: 50px; margin-left: 50px;}
+
+    @keyframes rainbowBlink {
+  0% { color: red; }
+  16.666% { color: orange; }
+  33.333% { color: rgb(32, 211, 71); }
+  50% { color: green; }
+  66.666% { color: blue; }
+  83.333% { color: indigo; }
+  100% { color: violet; }
+}
+
+
+
+
+@keyframes rainbowBlink1 {
+  0% { color: rgb(207, 175, 175); }
+  16.666% { color: rgb(137, 238, 79); }
+  33.333% { color: rgb(1, 82, 18); }
+  50% { color: rgb(83, 19, 59); }
+  66.666% { color: rgb(0, 140, 255); }
+  83.333% { color: rgb(0, 61, 130); }
+  100% { color: violet; }
+}
+
+@keyframes rainbowBlink2 {
+  0% { color: rgb(15, 1, 1); }
+  16.666% { color: rgb(40, 51, 34); }
+  33.333% { color: rgb(68, 102, 75); }
+  50% { color: rgb(236, 108, 187); }
+  66.666% { color: rgb(179, 255, 0); }
+  83.333% { color: rgb(0, 61, 130); }
+  100% { color: violet; }
+}
+@keyframes rainbowBlink3 {
+  0% { color: rgb(137, 189, 18); }
+  16.666% { color: rgb(15, 39, 146); }
+  33.333% { color: rgb(32, 211, 71); }
+  50% { color: rgb(83, 19, 59); }
+  66.666% { color: rgb(179, 255, 0); }
+  83.333% { color: rgb(157, 170, 185); }
+  100% { color: rgb(230, 197, 230); }
+}
+@keyframes rainbowBlink4 {
+  0% { color: rgb(70, 43, 43); }
+  16.666% { color: rgb(29, 26, 194); }
+  33.333% { color: rgb(65, 103, 139); }
+  50% { color: rgb(160, 2, 94); }
+  66.666% { color: rgb(179, 255, 0); }
+  83.333% { color: rgb(18, 34, 53); }
+  100% { color: rgb(27, 96, 153); }
+}
+
+@keyframes rainbowBlink5 {
+  0% { color: red; }
+  16.666% { color: rgb(76, 170, 21); }
+  33.333% { color: rgb(32, 211, 71); }
+  50% { color: rgb(83, 19, 59); }
+  66.666% { color: rgb(179, 255, 0); }
+  83.333% { color: rgb(0, 61, 130); }
+  100% { color: violet; }
+}
+
+
+
+
+
+
+.fter-flex .p1 {
+  animation: rainbowBlink 0.7s infinite; 
+}
+
+.fter-flex .p2 {
+  animation: rainbowBlink1 0.7s infinite; 
+}
+.fter-flex .p3 {
+  animation: rainbowBlink2 0.7s infinite; 
+}
+.fter-flex .p4 {
+  animation: rainbowBlink3 0.7s infinite; 
+}
+.fter-flex .p5 {
+  animation: rainbowBlink4 0.7s infinite; 
+}
+.fter-flex .p6 {
+  animation: rainbowBlink5 0.7s infinite; 
+}
+
+   
+    </style>
+
+</head>
+<body>
+    
+    <header>
+
+        <h3>헤더</h3>
+
+    </header>
+
+
+    <section class="flex-top" >
+      
+
+        
+    </section>
+        <div>
+        <ul class="price-title">
+            <li>
+                    <div class="title">
+                    <img src="img/original.jpeg">
+                        <div class="icon">중고거래</div>
+                    <div>
+                    <h2 style="font-size: small;">통기타 판매 합니다</h2>
+                    </div>
+                <div class="wrap">
+                <div class="price-font">
+                    <p>현재금액 </p>
+                    <span>2,200,000원</span>
+                </div>
+
+                <div class="address">
+                    <span>조회수</span>
+                    <p>2,300회</p>
+                </div>
+
+                    <div class="address1">
+                        <span>찜</span>
+                        <p> 3회</p>
+                    </div>
+                </div>
+            </div>
+                </li>
+                <li>
+                    <div class="title">
+                    <img src="img/bab81e5b9044ddc5abce16bf4d2a564d.jpg">
+                    <div class="icon" style="background-color: blue; border: 1px solid blue;" >경 매</div>
+                    <div>
+                    <h2 style="font-size: small;">일렉기타 경매 합니다</h2>
+                    </div>
+                <div class="wrap">
+                <div class="price-font">
+                    <p>현재금액 </p>
+                    <span>2,200,000원</span>
+                </div>
+
+                <div class="address">
+                    <span>조회수</span>
+                    <p>2,300회</p>
+                </div>
+
+                    <div class="address1">
+                        <span>찜</span>
+                        <p> 3회</p>
+                    </div>
+                </div>
+            </div>
+                </li>
+                <li>
+                    <div class="title">
+                    <img src="img/original.jpeg">
+                        <div class="icon">중고거래</div>
+                    <div>
+                    <h2 style="font-size: small;">통기타 판매 합니다</h2>
+                    </div>
+                <div class="wrap">
+                <div class="price-font">
+                    <p>현재금액 </p>
+                    <span>2,200,000원</span>
+                </div>
+
+                <div class="address">
+                    <span>조회수</span>
+                    <p>2,300회</p>
+                </div>
+
+                    <div class="address1">
+                        <span>찜</span>
+                        <p> 3회</p>
+                    </div>
+                </div>
+            </div>
+                </li>
+                <li>
+                    <div class="title">
+                    <img src="img/bab81e5b9044ddc5abce16bf4d2a564d.jpg">
+                    <div class="icon" style="background-color: blue; border: 1px solid blue;" >경 매</div>
+                    <div>
+                    <h2 style="font-size: small;">일렉기타 경매 합니다</h2>
+                    </div>
+                <div class="wrap">
+                <div class="price-font">
+                    <p>현재금액 </p>
+                    <span>2,200,000원</span>
+                </div>
+
+                <div class="address">
+                    <span>조회수</span>
+                    <p>2,300회</p>
+                </div>
+
+                    <div class="address1">
+                        <span>찜</span>
+                        <p> 3회</p>
+                    </div>
+                </div>
+            </div>
+                </li>
+                <li>
+                    <div class="title">
+                    <img src="img/original.jpeg">
+                        <div class="icon">중고거래</div>
+                    <div>
+                    <h2 style="font-size: small;">통기타 판매 합니다</h2>
+                    </div>
+                <div class="wrap">
+                <div class="price-font">
+                    <p>현재금액 </p>
+                    <span>2,200,000원</span>
+                </div>
+
+                <div class="address">
+                    <span>조회수</span>
+                    <p>2,300회</p>
+                </div>
+
+                    <div class="address1">
+                        <span>찜</span>
+                        <p> 3회</p>
+                    </div>
+                </div>
+            </div>
+                </li>
+                <li>
+                    <div class="title">
+                    <img src="img/bab81e5b9044ddc5abce16bf4d2a564d.jpg">
+                    <div class="icon" style="background-color: blue; border: 1px solid blue;" >경 매</div>
+                    <div>
+                    <h2 style="font-size: small;">일렉기타 경매 합니다</h2>
+                    </div>
+                <div class="wrap">
+                <div class="price-font">
+                    <p>현재금액 </p>
+                    <span>2,200,000원</span>
+                </div>
+
+                <div class="address">
+                    <span>조회수</span>
+                    <p>2,300회</p>
+                </div>
+
+                    <div class="address1">
+                        <span>찜</span>
+                        <p> 3회</p>
+                    </div>
+                </div>
+            </div>
+                </li>
+                <li>
+                    <div class="title">
+                    <img src="img/original.jpeg">
+                        <div class="icon">중고거래</div>
+                    <div>
+                    <h2 style="font-size: small;">통기타 판매 합니다</h2>
+                    </div>
+                <div class="wrap">
+                <div class="price-font">
+                    <p>현재금액 </p>
+                    <span>2,200,000원</span>
+                </div>
+
+                <div class="address">
+                    <span>조회수</span>
+                    <p>2,300회</p>
+                </div>
+
+                    <div class="address1">
+                        <span>찜</span>
+                        <p> 3회</p>
+                    </div>
+                </div>
+            </div>
+                </li>
+                <li>
+                    <div class="title">
+                    <img src="img/bab81e5b9044ddc5abce16bf4d2a564d.jpg">
+                    <div class="icon" style="background-color: blue; border: 1px solid blue;" >경 매</div>
+                    <div>
+                    <h2 style="font-size: small;">일렉기타 경매 합니다</h2>
+                    </div>
+                <div class="wrap">
+                <div class="price-font">
+                    <p>현재금액 </p>
+                    <span>2,200,000원</span>
+                </div>
+
+                <div class="address">
+                    <span>조회수</span>
+                    <p>2,300회</p>
+                </div>
+
+                    <div class="address1">
+                        <span>찜</span>
+                        <p> 3회</p>
+                    </div>
+                </div>
+            </div>
+                </li>
+                <li>
+                    <div class="title">
+                    <img src="img/original.jpeg">
+                        <div class="icon">중고거래</div>
+                    <div>
+                    <h2 style="font-size: small;">통기타 판매 합니다</h2>
+                    </div>
+                <div class="wrap">
+                <div class="price-font">
+                    <p>현재금액 </p>
+                    <span>2,200,000원</span>
+                </div>
+
+                <div class="address">
+                    <span>조회수</span>
+                    <p>2,300회</p>
+                </div>
+
+                    <div class="address1">
+                        <span>찜</span>
+                        <p> 3회</p>
+                    </div>
+                </div>
+            </div>
+                </li>
+                <li>
+                    <div class="title">
+                    <img src="img/bab81e5b9044ddc5abce16bf4d2a564d.jpg">
+                    <div class="icon" style="background-color: blue; border: 1px solid blue;" >경 매</div>
+                    <div>
+                    <h2 style="font-size: small;">일렉기타 경매 합니다</h2>
+                    </div>
+                <div class="wrap">
+                <div class="price-font">
+                    <p>현재금액 </p>
+                    <span>2,200,000원</span>
+                </div>
+
+                <div class="address">
+                    <span>조회수</span>
+                    <p>2,300회</p>
+                </div>
+
+                    <div class="address1">
+                        <span>찜</span>
+                        <p> 3회</p>
+                    </div>
+                </div>
+            </div>
+                </li>
+                <li>
+                    <div class="title">
+                    <img src="img/original.jpeg">
+                        <div class="icon">중고거래</div>
+                    <div>
+                    <h2 style="font-size: small;">통기타 판매 합니다</h2>
+                    </div>
+                <div class="wrap">
+                <div class="price-font">
+                    <p>현재금액 </p>
+                    <span>2,200,000원</span>
+                </div>
+
+                <div class="address">
+                    <span>조회수</span>
+                    <p>2,300회</p>
+                </div>
+
+                    <div class="address1">
+                        <span>찜</span>
+                        <p> 3회</p>
+                    </div>
+                </div>
+            </div>
+                </li>
+                <li>
+                    <div class="title">
+                    <img src="img/bab81e5b9044ddc5abce16bf4d2a564d.jpg">
+                    <div class="icon" style="background-color: blue; border: 1px solid blue;" >경 매</div>
+                    <div>
+                    <h2 style="font-size: small;">일렉기타 경매 합니다</h2>
+                    </div>
+                <div class="wrap">
+                <div class="price-font">
+                    <p>현재금액 </p>
+                    <span>2,200,000원</span>
+                </div>
+
+                <div class="address">
+                    <span>조회수</span>
+                    <p>2,300회</p>
+                </div>
+
+                    <div class="address1">
+                        <span>찜</span>
+                        <p> 3회</p>
+                    </div>
+                </div>
+            </div>
+                </li>
+                <li>
+                    <div class="title">
+                    <img src="img/original.jpeg">
+                        <div class="icon">중고거래</div>
+                    <div>
+                    <h2 style="font-size: small;">통기타 판매 합니다</h2>
+                    </div>
+                <div class="wrap">
+                <div class="price-font">
+                    <p>현재금액 </p>
+                    <span>2,200,000원</span>
+                </div>
+
+                <div class="address">
+                    <span>조회수</span>
+                    <p>2,300회</p>
+                </div>
+
+                    <div class="address1">
+                        <span>찜</span>
+                        <p> 3회</p>
+                    </div>
+                </div>
+            </div>
+                </li>
+                <li>
+                    <div class="title">
+                    <img src="img/bab81e5b9044ddc5abce16bf4d2a564d.jpg">
+                    <div class="icon" style="background-color: blue; border: 1px solid blue;" >경 매</div>
+                    <div>
+                    <h2 style="font-size: small;">일렉기타 경매 합니다</h2>
+                    </div>
+                <div class="wrap">
+                <div class="price-font">
+                    <p>현재금액 </p>
+                    <span>2,200,000원</span>
+                </div>
+
+                <div class="address">
+                    <span>조회수</span>
+                    <p>2,300회</p>
+                </div>
+
+                    <div class="address1">
+                        <span>찜</span>
+                        <p> 3회</p>
+                    </div>
+                </div>
+            </div>
+                </li>
+                <li>
+                    <div class="title">
+                    <img src="img/original.jpeg">
+                        <div class="icon">중고거래</div>
+                    <div>
+                    <h2 style="font-size: small;">통기타 판매 합니다</h2>
+                    </div>
+                <div class="wrap">
+                <div class="price-font">
+                    <p>현재금액 </p>
+                    <span>2,200,000원</span>
+                </div>
+
+                <div class="address">
+                    <span>조회수</span>
+                    <p>2,300회</p>
+                </div>
+
+                    <div class="address1">
+                        <span>찜</span>
+                        <p> 3회</p>
+                    </div>
+                </div>
+            </div>
+                </li>
+                <li>
+                    <div class="title">
+                    <img src="img/bab81e5b9044ddc5abce16bf4d2a564d.jpg">
+                    <div class="icon" style="background-color: blue; border: 1px solid blue;" >경 매</div>
+                    <div>
+                    <h2 style="font-size: small;">일렉기타 경매 합니다</h2>
+                    </div>
+                <div class="wrap">
+                <div class="price-font">
+                    <p>현재금액 </p>
+                    <span>2,200,000원</span>
+                </div>
+
+                <div class="address">
+                    <span>조회수</span>
+                    <p>2,300회</p>
+                </div>
+
+                    <div class="address1">
+                        <span>찜</span>
+                        <p> 3회</p>
+                    </div>
+                </div>
+            </div>
+                </li>
+
+      
+
+
+                
+            </ul>
+        </div>
+        
+        
+        
+        <div class="hot">
+            <img src="img/hot2.jpg">
+        </div>
+        
+        
+        <div class="body2">
+            
+            <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" slides-per-view="3"
+            space-between="30" free-mode="true">
+            <swiper-slide><img src="img/original.jpeg"></swiper-slide>
+            <swiper-slide><img src="img/original.jpeg"></swiper-slide>
+            <swiper-slide><img src="img/original.jpeg"></swiper-slide>
+            <swiper-slide><img src="img/original.jpeg"></swiper-slide>
+            <swiper-slide><img src="img/original.jpeg"></swiper-slide>
+            <swiper-slide><img src="img/original.jpeg"></swiper-slide>
+            <swiper-slide><img src="img/original.jpeg"></swiper-slide>
+            <swiper-slide><img src="img/original.jpeg"></swiper-slide>
+            <swiper-slide><img src="img/original.jpeg"></swiper-slide>
+            <swiper-slide><img src="img/original.jpeg"></swiper-slide>
+        
+           
+          </swiper-container>
+        
+        
+          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+
+
+
+        </div>
+
+        <footer>
+
+            <div class="fter2">
+                <img src="img/KakaoTalk_20240208_143018044.jpg">
+    
+                <div class="fter-flex">
+                <p class="p1">♚♚악기 중고거래 사이트♚♚</p>
+                <p class="p2">♥ US Music ♥</p>
+                <p class="p3">☆★가입시 $$ 쿠폰 증정★☆</p>
+                <p class="p4">§§해외본사안전운영§§</p>
+                <p class="p5">$$♜거래건수 10건 달성시 순금 1돈 증정♜$$</p>
+                <p class="p6">☞☞ 지금 거래하기 <a href="http://127.0.0.1:5500/project/project.html">http://127.0.0.1:5500/project/project.html</a> ☜☜</p>
+            </div>
+            <div>
+                <span>팀원 : 김강연,구진영,박지원,고현진,신주형</span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+                
+            </div>
+            
+            
+          
+          
+        </footer>
+
+
+    <script>
+
+
+
+
+    </script>
+
+    
+</body>
+
+
+</html>
